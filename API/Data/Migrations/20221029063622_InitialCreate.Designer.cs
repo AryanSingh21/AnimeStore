@@ -20,7 +20,7 @@ namespace API.Data.Migrations
 
             modelBuilder.Entity("API.Entities.Product", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -50,7 +50,7 @@ namespace API.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("ID");
+                    b.HasKey("id");
 
                     b.ToTable("Products");
                 });

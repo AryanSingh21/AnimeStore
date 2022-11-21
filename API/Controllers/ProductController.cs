@@ -11,7 +11,7 @@ namespace API.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller")]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly StoreContext _context;
@@ -27,7 +27,8 @@ namespace API.Controllers
 
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            return await _context.Products.ToListAsync();
+            var products = await _context.Products.ToListAsync();
+            return Ok(products);
 
             
 

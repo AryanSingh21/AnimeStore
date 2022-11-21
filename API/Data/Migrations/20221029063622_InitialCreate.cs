@@ -12,7 +12,7 @@ namespace API.Data.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "INTEGER", nullable: false)
+                    id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: false),
@@ -24,7 +24,7 @@ namespace API.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.ID);
+                    table.PrimaryKey("PK_Products", x => x.id);
                 });
         }
 
